@@ -56,7 +56,7 @@ public class P_19532 {
 
     static boolean logging_flag=false;
     public static void logging(String input1) {
-        if(logging_flag==true) {
+        if(logging_flag) {
             System.out.print(input1);
         }
     }
