@@ -5,6 +5,7 @@ public class P_19532 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
+        //입력받기
         int[] line1 = new int[3];
         for(int i=0; i<3; i++)
             line1[i] = input.nextInt();
@@ -16,6 +17,7 @@ public class P_19532 {
         logging("=====입력 출력=====\n");
         logging(Arrays.toString(line1)+"\n");
         logging(Arrays.toString(line2)+"\n");
+
 
         int head1=line1[0];
         int head2=line2[0];
