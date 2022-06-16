@@ -35,10 +35,9 @@ public class P_17478 {
         System.out.println(split.repeat(call_count)+sentence3);
         System.out.println(split.repeat(call_count)+sentence4);
 
-        if(a!=0) {
-            call_count++;
-            professor_JH(a-1);
-        }
+        call_count++;
+        professor_JH(a-1);
+
         call_count--;
         System.out.println(split.repeat(call_count)+after_sentence1);
     }
