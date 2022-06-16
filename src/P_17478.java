@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+/*
+2022-06-16 문제풀이 완료
+ */
 public class P_17478 {
     static String split = "____";
     static String sentence1 = "\"재귀함수가 뭔가요?\"";
