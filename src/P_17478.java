@@ -1,10 +1,11 @@
+import java.util.Collections;
 import java.util.Scanner;
 
 /*
-2022-06-16 문제풀이 완료
+2022-06-16 문제 풀이 완료
+2022-07-26 JDK 1.8용 대응 완료
  */
 public class P_17478 {
-    static String split = "____";
     static String sentence1 = "\"재귀함수가 뭔가요?\"";
     static String sentence2 = "\"잘 들어보게. 옛날옛날 한 산 꼭대기에 이세상 모든 지식을 통달한 선인이 있었어.";
     static String sentence3 = "마을 사람들은 모두 그 선인에게 수많은 질문을 했고, 모두 지혜롭게 대답해 주었지.";
@@ -22,23 +23,25 @@ public class P_17478 {
     }
 
     public static void professor_JH(int a) {
+        String copy = String.join("", Collections.nCopies(call_count, "____"));
 
         if (a==0) {
-            System.out.println(split.repeat(call_count)+sentence1);
-            System.out.println(split.repeat(call_count)+"\"재귀함수는 자기 자신을 호출하는 함수라네\"");
-            System.out.println(split.repeat(call_count)+after_sentence1);
+            System.out.println(copy+sentence1);
+            System.out.println(copy+"\"재귀함수는 자기 자신을 호출하는 함수라네\"");
+            System.out.println(copy+after_sentence1);
             return;
         }
 
-        System.out.println(split.repeat(call_count)+sentence1);
-        System.out.println(split.repeat(call_count)+sentence2);
-        System.out.println(split.repeat(call_count)+sentence3);
-        System.out.println(split.repeat(call_count)+sentence4);
+        System.out.println(copy+sentence1);
+        System.out.println(copy+sentence2);
+        System.out.println(copy+sentence3);
+        System.out.println(copy+sentence4);
 
-        call_count++;
-        professor_JH(a-1);
-
+        if(a!=0) {
+            call_count++;
+            professor_JH(a-1);
+        }
         call_count--;
-        System.out.println(split.repeat(call_count)+after_sentence1);
+        System.out.println(copy+after_sentence1);
     }
 }
