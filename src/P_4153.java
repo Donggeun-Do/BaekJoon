@@ -1,15 +1,21 @@
-import java.lang.reflect.Array;
-import java.util.ArrayList;
+import java.io.*;
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class P_4153 {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         while(true) {
-            int[] arr = new int[3];
+            String temp = br.readLine();
+            if (temp.equals("0 0 0"))
+                break;
 
+            Integer[] arr = Arrays.stream(temp.split(" ")).map(s -> Integer.parseInt(s)).sorted().toArray(Integer[] :: new);
+
+            bw.write(arr[2]*arr[2] == arr[0]*arr[0]+arr[1]*arr[1] ? "right\n" : "wrong\n");
         }
+        br.close();
+        bw.close();
     }
 }
