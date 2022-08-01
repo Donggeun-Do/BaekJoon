@@ -1,5 +1,10 @@
 import java.io.*;
 
+/*
+ * 2022-06-28 문제풀이 완료
+ * 단
+ */
+
 public class P_1003 {
     static int count_zero;
     static int count_one;
